@@ -5,11 +5,7 @@ RUN apt-get update
 
 # Install OS packages
 RUN apt-get install -y \
-  bash \
-  default-jdk \
-  tree \
-  parallel \
-  ansilove
+  default-jdk
 
 # Default env
 ENV FDROID_ROOT=/fdroid
