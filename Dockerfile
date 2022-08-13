@@ -11,6 +11,7 @@ RUN apt-get install -y tree
 
 # Default env
 ENV FDROID_ROOT=/fdroid
+WORKDIR /fdroid
 
 # Clean up
 RUN rm -rf /var/lib/apt/lists/*
