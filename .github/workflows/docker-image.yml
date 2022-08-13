@@ -23,3 +23,5 @@ jobs:
         with:
           push: true
           tags: ghcr.io/tlan16/docker-executable-fdroidserver:latest
+          cache-from: type=registry,ref=ghcr.io/tlan16/docker-executable-fdroidserver:latest
+          cache-to: type=inline
