@@ -8,7 +8,8 @@ RUN apt-get install -y \
   bash \
   default-jdk \
   tree \
-  parallel
+  parallel \
+  ansilove
 
 # Default env
 ENV FDROID_ROOT=/fdroid
