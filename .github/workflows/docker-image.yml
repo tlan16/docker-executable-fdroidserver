@@ -5,6 +5,7 @@ on:
     branches: [ "main" ]
   schedule: # Every Melbourne midnight
     - cron: "0 14 * * *"
+  workflow_dispatch:
 
 jobs:
   build-and-publish:
