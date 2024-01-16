@@ -29,6 +29,8 @@ jobs:
         with:
           push: true
           tags: ghcr.io/tlan16/docker-executable-fdroidserver:latest
-          cache-from: type=registry,ref=ghcr.io/tlan16/docker-executable-fdroidserver:latest
-          cache-to: type=inline
+          cache-from: |
+            type=gha
+            type=registry,ref=${{ secrets.DOCKER_USERNAME }}/qbittorrent-enhanced:latest
+          cache-to: type=gha,mode=max
       - uses: gautamkrishnar/keepalive-workflow@1.1.0
