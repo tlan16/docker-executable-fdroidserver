@@ -25,10 +25,8 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-      - uses: docker/build-push-action@v5
+      - uses: docker/bake-action@v4
         with:
           push: true
-          tags: ghcr.io/tlan16/docker-executable-fdroidserver:latest
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          targets: ghcr.io/tlan16/docker-executable-fdroidserver:latest
       - uses: gautamkrishnar/keepalive-workflow@1.1.0
