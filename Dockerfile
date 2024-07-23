@@ -5,13 +5,11 @@ RUN apt-get update
 
 # Install OS packages
 RUN apt-get install -y \
-  default-jdk
+  default-jdk \
+  aria2 \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
 
 # Default env
 ENV FDROID_ROOT=/fdroid
 WORKDIR /fdroid
-
-# Clean up
-RUN apt-get clean
-RUN rm -rf /var/lib/apt/lists/*
-
