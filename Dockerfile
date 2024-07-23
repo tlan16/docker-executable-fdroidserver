@@ -1,10 +1,9 @@
 FROM registry.gitlab.com/fdroid/docker-executable-fdroidserver:master
 
-# Update first
-RUN apt-get update
 
 # Install OS packages
-RUN apt-get install -y \
+RUN apt-get update && \
+  apt-get install -y \
   default-jdk \
   aria2 \
   && apt-get clean \
