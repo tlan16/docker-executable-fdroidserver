@@ -11,6 +11,9 @@ RUN apt-get update && \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
+# uv
+COPY --from=ghcr.io/astral-sh/uv /uv /uvx /bin/
+
 # Default env
 ENV FDROID_ROOT=/fdroid
 WORKDIR /fdroid
